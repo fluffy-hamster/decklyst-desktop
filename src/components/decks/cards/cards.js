@@ -17,7 +17,7 @@
     CardsController.$inject = ['$scope', '$http'];
     function CardsController($scope, $http) {
         
-        $http.get('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/cards.json?v=' + Math.random())
+        $http.get('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/cards.json?v=' + Math.random(), {cache: true})
             .then(result => {
                 $scope.card_list = result.data;
                 console.log($scope.card_list)
