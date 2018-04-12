@@ -1,0 +1,21 @@
+cards
+    overflow: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-height: calc(100vh - 38px)
+    padding-top: 10px
+    .cards
+        height: 330px
+        width: 245px
+        background-repeat: no-repeat !important
+        background-size: 100% !important
+        background-position: 50% !important
+        &:active
+            filter: brightness(2)
+        &.unit
+            background: url('../images/minion.png')
+        &.spell
+            background: url('../images/spell.png')
+        &.artifact
+            background: url('../images/artifact.png')

@@ -19,8 +19,11 @@
         
         $http.get('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/cards.json?v=' + Math.random())
             .then(result => {
-                console.log(result.data)
-            })
+                $scope.card_list = result.data;
+                console.log($scope.card_list)
+            });
+
+        $scope.factionFilter = card => card.faction == 'Lyonar'; 
 
     }
 })();
