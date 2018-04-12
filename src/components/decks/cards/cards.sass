@@ -6,14 +6,16 @@ cards
     max-height: calc(100vh - 38px)
     padding-top: 10px
     .cards
-        height: 330px
-        width: 245px
+        height: 270px
+        width: 200px
         background-repeat: no-repeat !important
         background-size: 100% !important
         background-position: 50% !important
         position: relative
         &:active
             filter: brightness(2)
+        &:nth-child(3n - 1)
+            margin: 0 10px
         &.unit
             background: url('../images/minion.png')
         &.spell
@@ -24,11 +26,14 @@ cards
 
 
         .gif
-            transform: scale(1.8)
+            transform: scale(2)
             position: absolute
-            left: calc(50% - 60px)
-            width: 120px
-            height: 120px
+            top: -31px
+            left: calc(50% - 50px)
+            width: 100px
+            height: 100px
             background-repeat: no-repeat !important
             background-size: cover !important
             image-rendering: pixelated
+            pointer-events: none
+            cursor: pointer
