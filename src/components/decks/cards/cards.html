@@ -1,4 +1,5 @@
 <div class="cards {{card.category}}" ng-repeat="card in card_list | filter: factionFilter">
+    <div class="mana" ng-if="card.mana >= 0">{{card.mana}}</div>
     <div class="gif" style="background: url('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/images/gifs/{{card.localGif}}.gif')"></div>
     <img class="shadow" src="images/shadow.png"/>
     <div class="header">
