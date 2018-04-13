@@ -1,3 +1,12 @@
 <div class="cards {{card.category}}" ng-repeat="card in card_list | filter: factionFilter">
     <div class="gif" style="background: url('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/images/{{card.localGif}}.gif')"></div>
+    <div class="header">
+        <div class="name">{{card.name}}</div>
+        <div class="type">{{card.type}}</div>
+    </div>
+    <img class="rarity" ng-src="images/{{card.rarity}}.png"/>
+    <div class="stats">
+        <div class="atk">{{card.attack}}</div>
+        <div class="hp">{{card.hp}}</div>
+    </div>
 </div>
