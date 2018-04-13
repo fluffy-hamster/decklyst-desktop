@@ -2,8 +2,8 @@
     <div class="label twitch">Twitch</div>
     <div class="feed">
         <div class="content" ng-repeat="item in twitch_feed">
-            <div class="title">{{item.channel.name}}</div>
-            <div class="description">{{item.channel.status}}</div>
+            <div class="title" ng-bind-html="item.channel.name | unsafe"></div>
+            <div class="description" ng-bind-html="item.channel.status | unsafe"></div>
             <img class="image" ng-src="{{item.preview.medium}}" />
         </div>
     </div>
@@ -12,8 +12,8 @@
     <div class="label youtube">YouTube</div>
     <div class="feed">
         <div class="content" ng-repeat="item in youtube_feed">
-            <div class="title">{{item.snippet.title}}</div>
-            <div class="description">{{item.snippet.description}}</div>
+            <div class="title" ng-bind-html="item.snippet.title | unsafe"></div>
+            <div class="description" ng-bind-html="item.snippet.description | unsafe"></div>
             <img class="image" ng-src="{{item.snippet.thumbnails.medium.url}}" />
         </div>
     </div>
@@ -22,8 +22,8 @@
     <div class="label reddit">Reddit</div>
     <div class="feed">
         <div class="content" ng-repeat="item in reddit_feed">
-            <div class="title">{{item.data.title}}</div>
-            <div class="description">{{item.data.selftext}}</div>
+            <div class="title" ng-bind-html="item.data.title | unsafe"></div>
+            <div class="description" ng-bind-html="item.data.selftext | unsafe"></div>
             <img class="image" ng-src="{{item.data.media.oembed.thumbnail_url}}" ng-if="item.data.media.oembed.thumbnail_url" />
         </div>
     </div>

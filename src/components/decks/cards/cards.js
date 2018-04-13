@@ -23,7 +23,7 @@
                 console.log($scope.card_list)
             });
 
-        $scope.factionFilter = card => card.faction == 'Lyonar'; 
+        $scope.factionFilter = card => card.faction == 'Magmar'; 
 
     }
 })();

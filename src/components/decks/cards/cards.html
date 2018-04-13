@@ -1,12 +1,16 @@
 <div class="cards {{card.category}}" ng-repeat="card in card_list | filter: factionFilter">
-    <div class="gif" style="background: url('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/images/{{card.localGif}}.gif')"></div>
+    <div class="gif" style="background: url('https://raw.githubusercontent.com/Constitute/decklyst-desktop/cards/images/gifs/{{card.localGif}}.gif')"></div>
+    <img class="shadow" src="images/shadow.png"/>
     <div class="header">
         <div class="name">{{card.name}}</div>
         <div class="type">{{card.type}}</div>
     </div>
-    <img class="rarity" ng-src="images/{{card.rarity}}.png"/>
+    <img class="rarity" ng-if="card.rarity != 'Basic'" ng-src="images/{{card.rarity}}.png"/>
     <div class="stats">
         <div class="atk">{{card.attack}}</div>
         <div class="hp">{{card.hp}}</div>
+    </div>
+    <div class="description-holder">
+        <div class="description" ng-bind-html="card.description | unsafe"></div>
     </div>
 </div>

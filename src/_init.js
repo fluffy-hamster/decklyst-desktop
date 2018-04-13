@@ -44,4 +44,6 @@ import * as router from '@uirouter/angularjs';
             };
             firebase.initializeApp(config);
         })
+
+        .filter('unsafe', $sce => text => $sce.trustAsHtml(text))
 })();

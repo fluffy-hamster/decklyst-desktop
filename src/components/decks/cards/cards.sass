@@ -13,23 +13,30 @@ cards
         background-size: 100% !important
         background-position: 50% !important
         position: relative
+        text-align: center
+        -webkit-font-smoothing: subpixel-antialiased
         &:active
             filter: brightness(2)
         &:nth-child(3n - 1)
             margin: 0 10px
         &.unit
             background: url('../images/minion.png')
+            .gif
+                top: -31px
         &.spell
             background: url('../images/spell.png')
+            .gif
+                top: -38px
         &.artifact
             background: url('../images/artifact.png')
+            .gif
+                top: -41px
 
 
 
         .gif
             transform: scale(2)
             position: absolute
-            top: -31px
             left: calc(50% - 50px)
             width: 100px
             height: 100px
@@ -38,3 +45,58 @@ cards
             image-rendering: pixelated
             pointer-events: none
             cursor: pointer
+            z-index: 1
+
+        .shadow
+            position: absolute
+            left: calc(50% - 48px)
+            top: 70px
+            opacity: .7
+
+
+        .header
+            margin-top: 113px
+            text-transform: uppercase
+            .name
+                color: #fff
+                font-weight: 400
+                font-size: 12px
+            .type
+                color: #90cacf
+                font-weight: 300
+                font-size: 10px
+                margin-top: 1px
+
+        .rarity
+            width: 40px
+            margin-top: 2px
+
+
+        .stats
+            color: #fff
+            display: flex
+            justify-content: space-between
+            width: 143px
+            margin: 16px auto 0
+            font-size: 19px
+            position: absolute
+            bottom: 98px
+            left: calc(50% - 72px)
+            div
+                width: 36px
+
+        .description-holder
+            font-weight: 300
+            color: #90cacf
+            font-size: 11px
+            position: absolute
+            top: 180px
+            justify-content: center
+            align-items: center
+            width: 180px
+            left: calc(50% - 90px)
+            height: 62px
+            display: flex
+            .description
+                b
+                    font-weight: 600
